@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7vl-WV-c2f">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-Vw-SHn">
+                                <rect key="frame" x="38" y="131" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Paises"/>
+                                <connections>
+                                    <action selector="PaisesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5l5-j3-mhr"/>
+                                    <segue destination="qWx-zA-MrU" kind="show" id="bHT-GI-Yvb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-IU-EZ8">
+                                <rect key="frame" x="26" y="206" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Provincias"/>
+                                <connections>
+                                    <segue destination="1eA-mE-CFY" kind="show" id="knL-fD-rUD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-T3-Pmu">
+                                <rect key="frame" x="34" y="276" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Bluetooth"/>
+                                <connections>
+                                    <segue destination="GSU-br-SwP" kind="show" id="Snk-ud-grF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UC-tP-8rI">
+                                <rect key="frame" x="0.0" y="44" width="600" height="590"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1UC-tP-8rI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B8L-7k-XSX"/>
+                            <constraint firstItem="1UC-tP-8rI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FOu-Lo-fg2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1UC-tP-8rI" secondAttribute="trailing" id="H2z-Xy-Jul"/>
+                            <constraint firstItem="1UC-tP-8rI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="K4z-gb-Bbu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yg3-Ua-crr">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="QId-6O-9Bk">
+                            <connections>
+                                <action selector="menuTapped:" destination="BYZ-38-t0r" id="Ppm-qd-sei"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leadingCon" destination="FOu-Lo-fg2" id="GBW-ZP-8g6"/>
+                        <outlet property="trailingCon" destination="H2z-Xy-Jul" id="dgL-28-QUb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nGf-tH-2FR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7vl-WV-c2f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LoF-jz-3ql">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MlG-sy-VRa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kK9-vR-9t1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="138"/>
+        </scene>
+        <!--Paises View Controller-->
+        <scene sceneID="Y4n-tt-L1X">
+            <objects>
+                <viewController id="qWx-zA-MrU" customClass="PaisesViewController" customModule="SlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Xn-Fk-Jlo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALi-kR-GfP">
+                                <rect key="frame" x="0.0" y="186" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2T-0q-fGm">
+                                <rect key="frame" x="129" y="424" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Obtener datos del pais"/>
+                                <connections>
+                                    <action selector="obtenerInfoPais:" destination="qWx-zA-MrU" eventType="touchUpInside" id="KFs-fJ-7E8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="yao-As-b9K"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="ALi-kR-GfP" id="M5M-mR-qjy"/>
+                        <segue destination="1eA-mE-CFY" kind="show" identifier="paisDetalle" id="PiV-Xc-kx7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIB-EU-oz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="883"/>
+        </scene>
+        <!--Pais Detalle View Controller-->
+        <scene sceneID="c3r-ZP-2Cr">
+            <objects>
+                <viewController id="1eA-mE-CFY" customClass="PaisDetalleViewController" customModule="SlideOutMenu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d1x-rg-Lah">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="0y6-BY-FDb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Jr-tN-PHn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Irt-wB-RZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="883"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1jf-1F-3Jj">
+            <objects>
+                <viewController id="GSU-br-SwP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="guS-H3-rXN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="aM2-QQ-9y3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePi-NS-Jeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855" y="883"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PiV-Xc-kx7"/>
+    </inferredMetricsTieBreakers>
+</document>
