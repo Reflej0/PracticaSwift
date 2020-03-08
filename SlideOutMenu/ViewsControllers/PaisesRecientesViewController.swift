@@ -1,56 +1,46 @@
-import Foundation
 import UIKit
+import Foundation
+import WebKit
 import Alamofire //Para HTTPs Requests.
 import SwiftyJSON //Para interpretar JSONs.
 
-//Separacion de PaisesViewController.
-class PaisesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
+class PaisesRecientesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
-    //Referencia al PickerView.
     @IBOutlet weak var pickerView: UIPickerView!
     
-    //Array que contiene los elementos del PickerData.
     var pickerData: [String] = [String]()
     var selectedCountry : String = ""
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.loadPaises()
+        self.loadPickerView()
     }
     
-    //Funcion que realiza un GET y carga el pickerData.
-    private func loadPaises()
+    private func loadPickerView()
     {
-        AF.request("https://restcountries.eu/rest/v2/all", method: .get).validate().responseJSON { response in
-        switch response.result {
-        case .success(let value):
-            let json = JSON(value)
-            for jsonElement in json
-            {
-                let countryName = jsonElement.1["name"]
-                self.pickerData.append("\(countryName)")
-            }
-            self.pickerView.delegate = self
-            self.pickerView.dataSource = self
-        case .failure(let error):
-            print(error)
+        let storage = UserDefaults.standard;
+        let paisesVisitados = storage.stringArray(forKey: "paisesVisitados") ?? [String]()
+        for paisVisitado in paisesVisitados
+        {
+            self.pickerData.append(paisVisitado)
         }
-        }
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
     }
     
     @IBAction func obtenerInfoPais(_ sender: Any)
     {
         self.selectedCountry = pickerData[pickerView.selectedRow(inComponent: 0)]
-        print("Seleccionado: \(selectedCountry)")
-        performSegue(withIdentifier: "paisDetalle", sender: self)
+            print("Seleccionado: \(selectedCountry)")
+            performSegue(withIdentifier: "paisDetalleOffline", sender: self)
     }
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if (segue.identifier == "paisDetalle")
+        if (segue.identifier == "paisDetalleOffline")
         {
-            let viewController = segue.destination as? PaisDetalleViewController
+            let viewController = segue.destination as? PaisesRecientesViewController
             viewController?.selectedCountry = self.selectedCountry
         }
     }
@@ -70,3 +60,4 @@ class PaisesViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return pickerData[row]
     }
 }
+

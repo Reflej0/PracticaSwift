@@ -12,6 +12,7 @@
 		0457641523039B0C000B8B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0457641323039B0C000B8B97 /* Main.storyboard */; };
 		0457641723039B0D000B8B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0457641623039B0D000B8B97 /* Assets.xcassets */; };
 		0457641A23039B0D000B8B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0457641823039B0D000B8B97 /* LaunchScreen.storyboard */; };
+		D44F5E90241552B600945D73 /* PaisesRecientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44F5E8F241552B600945D73 /* PaisesRecientesViewController.swift */; };
 		D4ADDC44240C31B400F0F961 /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ADDC43240C31B400F0F961 /* Pais.swift */; };
 		D4ADDC46240C32DD00F0F961 /* Provincia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ADDC45240C32DD00F0F961 /* Provincia.swift */; };
 		D4ADDC48240C32F400F0F961 /* PaisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ADDC47240C32F400F0F961 /* PaisController.swift */; };
@@ -32,6 +33,7 @@
 		19F82D355077B1966C7C23C0 /* Pods-SlideOutMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideOutMenu.release.xcconfig"; path = "Target Support Files/Pods-SlideOutMenu/Pods-SlideOutMenu.release.xcconfig"; sourceTree = "<group>"; };
 		94DCCEA50FE828F6C5E8436B /* Pods_SlideOutMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideOutMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A9BECC0F2BFAE8D091164F /* Pods-SlideOutMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideOutMenu.debug.xcconfig"; path = "Target Support Files/Pods-SlideOutMenu/Pods-SlideOutMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		D44F5E8F241552B600945D73 /* PaisesRecientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesRecientesViewController.swift; sourceTree = "<group>"; };
 		D4ADDC43240C31B400F0F961 /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		D4ADDC45240C32DD00F0F961 /* Provincia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provincia.swift; sourceTree = "<group>"; };
 		D4ADDC47240C32F400F0F961 /* PaisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				D4ADDC4D240C3A5600F0F961 /* PaisesViewController.swift */,
 				D4AEABE4240C5D4A00F9389F /* PaisDetalleViewController.swift */,
+				D44F5E8F241552B600945D73 /* PaisesRecientesViewController.swift */,
 			);
 			path = ViewsControllers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				D4ADDC46240C32DD00F0F961 /* Provincia.swift in Sources */,
 				D4ADDC48240C32F400F0F961 /* PaisController.swift in Sources */,
 				0457641023039B0C000B8B97 /* AppDelegate.swift in Sources */,
+				D44F5E90241552B600945D73 /* PaisesRecientesViewController.swift in Sources */,
 				D4ADDC44240C31B400F0F961 /* Pais.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
