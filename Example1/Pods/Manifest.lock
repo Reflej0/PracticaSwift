@@ -1,0 +1,34 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - NSTEasyJSON (1.0.6)
+
+DEPENDENCIES:
+  - AFNetworking
+  - NSTEasyJSON
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - NSTEasyJSON
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  NSTEasyJSON: 71399a97a84f35e31a7caa98e1385764d66d5e6d
+
+PODFILE CHECKSUM: 6a6b3da1b922734a36d003045df1447089c36d34
+
+COCOAPODS: 1.9.0
